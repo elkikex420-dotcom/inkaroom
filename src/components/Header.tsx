@@ -46,7 +46,9 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-tr from-fuchsia-600 to-blue-600 rounded-lg flex items-center justify-center font-black text-white italic">I</div>
-          <span className="font-display font-bold text-xl tracking-tighter text-white uppercase">INKAROOM</span>
+          <span className="font-display font-bold text-xl tracking-tighter text-white uppercase">
+                <span className="brand-name notranslate" translate="no">INKAROOM</span>
+          </span>
         </Link>
 
         <div className="flex items-center gap-4">

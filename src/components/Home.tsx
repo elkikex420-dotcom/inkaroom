@@ -62,9 +62,9 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto relative z-10 text-center flex flex-col items-center">
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="flex flex-col items-center">
             
-            <h1 className="text-[15vw] md:text-[180px] lg:text-[220px] font-black italic tracking-[-0.08em] leading-[0.8] mb-4 text-white uppercase select-none">
-              INKAROOM
-            </h1>
+          <h1 className="text-[15vw] md:text-[180px] lg:text-[220px] font-black italic tracking-[-0.08em] leading-[0.8] mb-4 text-white uppercase select-none">
+          <span className="brand-name notranslate" translate="no">INKAROOM</span>
+          </h1>
 
             <p className="text-2xl md:text-5xl font-black italic tracking-tighter mb-16 max-w-2xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-blue-500 uppercase leading-tight">
@@ -82,9 +82,9 @@ export const Home = () => {
                   placeholder="¿Dónde quieres vivir?"
                   className="w-full bg-transparent border-none focus:ring-0 py-4 px-4 text-lg text-white placeholder:text-white/10 font-bold italic outline-none"
                 />
-                <button type="submit" className="bg-white text-black px-8 py-3.5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-fuchsia-500 hover:text-white transition-all active:scale-95 shadow-xl shadow-white/5">
-                  BUSCAR
-                </button>
+                 <button type="submit" className="bg-white text-black px-8 py-3.5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-fuchsia-500 hover:text-white transition-all active:scale-95 shadow-xl shadow-white/5">
+                 <span className="notranslate" translate="no">BUSCAR</span>
+                 </button>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/10 to-blue-600/10 blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity rounded-full z-0"></div>
             </form>

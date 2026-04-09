@@ -13,3 +13,7 @@
     @apply bg-black text-white font-sans antialiased;
   }
 }
+.brand-name {
+  font-family: inherit;
+  display: inline-block;
+}
