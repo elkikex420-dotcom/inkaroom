@@ -58,6 +58,34 @@ export const LoginPage = () => {
       setView('login');
     }
   };
+  const handleGoogleLogin = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        queryParams: {
+          access_type: 'offline',
+          prompt: 'select_account',
+        },
+        redirectTo: window.location.origin, // Esto los regresa a Inkaroom al terminar
+      },
+    });
+  
+    if (error) {
+      alert("Error con Google: " + error.message);
+    }
+  };
+  const handleFacebookLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'facebook',
+      options: {
+        redirectTo: window.location.origin,
+      },
+    });
+  
+    if (error) {
+      alert("Error al conectar con Facebook: " + error.message);
+    }
+  };
 
   return (
     <div className="min-h-[calc(100vh-73px)] bg-black flex items-center justify-center px-6 py-12 overflow-hidden">
@@ -79,6 +107,7 @@ export const LoginPage = () => {
             <div className="space-y-4 mb-8">
               <button 
                 type="button"
+                onClick={handleGoogleLogin}
                 className="w-full bg-white hover:bg-gray-100 text-black font-bold py-3 px-4 rounded-xl transition-all flex items-center justify-center space-x-3 disabled:opacity-70"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -92,6 +121,7 @@ export const LoginPage = () => {
               
               <button 
                 type="button"
+                onClick={handleFacebookLogin}
                 className="w-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold py-3 px-4 rounded-xl transition-all flex items-center justify-center space-x-3 disabled:opacity-70"
               >
                 <Facebook className="w-5 h-5" />
